@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/style_v.3.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- <script src="./app.js"></script> --> 
+    <title>Philia Issari</title>
+</head>
+<body>
+    <header>
+        <h2></h2>
+        <nav>
+            <ul>
+                <li><a href="#">Αρχική</a></li>
+                <li><a href="./cv.html">Βιογραφικό</a></li>
+                <li><a href="research">Έρευνα</a></li>
+                <li><a href="publications">Δημοσιεύσεις</a></li>
+                <li><a href="news">Νέα</a></li>
+                <li><a href="contact">Επικοινωνία</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <div class="container">
+            <div class="image-container">
+                <img src="./resources/images/philia_issari.jpg" alt="Philia Issari Image">
+                <p>ΦΙΛΙΑ ΙΣΑΡΗ</p>
+            </div>
+            <div class="text-container">
+                <div class="text-box-border">
+                    <div class="text-box">
+                        <h2>Καθηγήτρια Συμβουλευτικής Ψυχολογίας, Τμήμα Ψυχολογίας στο Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="new_section">
+            <div class="stadiodromia">
+                <div class="box_header">
+                    <h3 id="stadiodromia_1">Σταδιοδρομία</h3>
+                    <button>Περισσότερα...</button>
+                </div>
+            </div>
+            <div class="ereynhtika_programmata">
+                <div class="box_header">
+                    <h3 id="ereyvhtika">Ερευνητικά Προγράμματα</h3>
+                    <button>Περισσότερα...</button>
+                </div>
+            </div>
+            <div class="dhmosieuseis">
+                <div class="box_header">
+                    <h3 id="dhmosieuseis">Δημοσιεύσεις</h3>
+                    <button>Περισσότερα...</button>
+                </div>
+            </div>
+        </section>
+        <div class="slideshow-publications">
+            <div class="publication-container">
+                <div><h3>Επιλεγμένες Δημοσιεύσεις:</h3></div>
+                <div class="publication">
+                    <img src="./resources/images/poiotikh_methodologia_ereunas_2015.jpg" />
+                    <!-- <div class="caption">Δημοσιεύσεις</div> -->
+                </div>
+                <div class="publication">
+                    <img src="./resources/images/paidagwgikh_sxesh.jpg" />
+                    <!-- <div class="caption">Δημοσιεύσεις</div> -->
+                </div>
+                <div class="publication">
+                    <img src="./resources/images/poiotikh_ereuna.jpg" />
+                    <!-- <div class="caption">Δημοσιεύσεις</div> -->
+                </div>
+                <div class="publication">
+                    <img src="./resources/images/polypolitismikh_symvouleutikh.jpg" />
+                    <!-- <div class="caption">Δημοσιεύσεις</div> -->
+                </div>
+                <div class="publication">
+                    <img src="./resources/images/therapeutikes_pragmatikothtes.jpg" />
+                    <!-- <div class="caption">Δημοσιεύσεις</div> -->
+                </div>
+            </div>
+        </div>
+    <footer>
+        <h6>Created by Charoula Fotiadou</h6>
+        <ul>
+            <li>Διεύθυνση: Γραφείο 417 (4ος όροφος Φιλοσοφικής Σχολής</li>
+            <li>Τηλέφωνο: 210 7277460</li>
+            <li>Email: issariph@psych.uoa.gr</li>
+        </ul>
+    </footer>
+    <script>
+        var publicationsIndex = 0;
+        showPublication();
+        
+        function showPublication() {
+            var i;
+            var publications = document.getElementsByClassName("publication");
+        
+            for (i = 0; i < publications.length; i++) {
+                publications[i].style.display = "none";
+            }
+        
+            publicationsIndex++;
+            if (publicationsIndex > publications.length - 2) {
+                publicationsIndex = 1;
+            }
+        
+            for (i = publicationsIndex - 1; i < publicationsIndex + 2; i++) {
+                publications[i].style.display = "block";
+            }
+        
+            setTimeout(showPublication, 5000); // Change image every 5 seconds
+        }
+    </script>
+      </body>
+</html>

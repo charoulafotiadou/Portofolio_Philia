@@ -1,0 +1,27 @@
+.cover {
+    width: 100%;
+    height: 300px;
+    background-color: aqua;
+    z-index: 100;
+}
+
+.cover:hover {
+    cursor: pointer;    
+    transform: translateY(-1000px);
+    transition: 2s;
+}
+
+.img {
+    display: flex;
+    position: relative;
+    bottom: -10px;
+    right: 200px;
+}
+
+.underneath {
+    background-color: antiquewhite;
+    z-index: -1;
+    position: absolute;
+    top: 100px;
+}
+

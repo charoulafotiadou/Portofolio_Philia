@@ -1,0 +1,276 @@
+.fonts-examples {
+    font-size: 20px;
+}
+.Open_Sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.Ubuntu_Condensed {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.Fira_Sans_Extra_Condensed {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.Jura {
+    font-family: 'Jura', sans-serif;
+}
+
+.color_theme {
+    position: relative;
+    display: inline-block;
+}
+
+.Stylish_Sophisticated {
+    width: 400px;
+    margin: 10px;
+    display: inline-flex;
+}
+
+.color_1 {
+    width: 100px;
+    height: 20px;
+    background-color: #5D5C61;
+} 
+
+.color_2 {
+    width: 100px;
+    height: 20px;
+    background-color: #938e94;
+} 
+
+.color_3 {
+    width: 100px;
+    height: 20px;
+    background-color: #7395ae;
+}
+
+.color_4 {
+    width: 100px;
+    height: 20px;
+    background-color: #557a95;
+}
+
+.color_5 {
+    width: 100px;
+    height: 20px;
+    background-color: #b0a295;
+}
+
+.minimal_yet_warm {
+    width: 400px;
+    margin: 10px;
+    display: inline-flex;
+}
+
+.color_6 {
+    width: 100px;
+    height: 20px;
+    background-color: #eae8dc;
+}
+
+.color_7 {
+    width: 100px;
+    height: 20px;
+    background-color: #d8c3a4;
+}
+
+.color_8 {
+    width: 100px;
+    height: 20px;
+    background-color: #8e8d89;
+}
+
+.color_9 {
+    width: 100px;
+    height: 20px;
+    background-color: #e88073;
+}
+
+.color_10 {
+    width: 100px;
+    height: 20px;
+    background-color: #e85a50;
+}
+
+.corporate_and_traditional {
+    width: 400px;
+    margin: 10px;
+    display: inline-flex;
+}
+
+.color_11 {
+    width: 100px;
+    height: 20px;
+    background-color: #89bdbb;
+}
+
+.color_12 {
+    width: 100px;
+    height: 20px;
+    background-color: #264e58;
+}
+
+.color_13 {
+    width: 100px;
+    height: 20px;
+    background-color: #112d31;
+}
+
+.color_14 {
+    width: 100px;
+    height: 20px;
+    background-color: #4e4a41;
+}
+
+.color_15 {
+    width: 100px;
+    height: 20px;
+    background-color: #6e6659;
+}
+
+.clean_and_modern {
+    width: 400px;
+    margin: 10px;
+    display: inline-flex;
+}
+
+.color_16 {
+    width: 100px;
+    height: 20px;
+    background-color: #17242a;
+}
+
+.color_17 {
+    width: 100px;
+    height: 20px;
+    background-color: #2b7a77;
+}
+
+.color_18 {
+    width: 100px;
+    height: 20px;
+    background-color: #3aafa9;
+}
+
+.color_19 {
+    width: 100px;
+    height: 20px;
+    background-color: #def2f1;
+}
+
+.color_20 {
+    width: 100px;
+    height: 20px;
+    background-color: #ffffff;
+    border: 1px solid #def2f1;
+}
+
+.vibrant_and_elegant {
+    width: 400px;
+    margin: 10px;
+    display: inline-flex;
+}
+
+.color_21 {
+    width: 100px;
+    height: 20px;
+    background-color: #f7e9a0;
+}
+
+.color_22 {
+    width: 100px;
+    height: 20px;
+    background-color: #f76d6d;
+}
+
+.color_23 {
+    width: 100px;
+    height: 20px;
+    background-color: #a8d1e7;
+}
+
+.color_24 {
+    width: 100px;
+    height: 20px;
+    background-color: #374687;
+}
+
+.color_25 {
+    width: 100px;
+    height: 20px;
+    background-color: #24315e;
+}
+
+.close_to_nature {
+    width: 400px;
+    margin: 10px;
+    display: inline-flex;
+}
+
+.color_26 {
+    width: 100px;
+    height: 20px;
+    background-color: #697865;
+}
+
+.color_27 {
+    width: 100px;
+    height: 20px;
+    background-color: #31708f;
+}
+
+.color_28 {
+    width: 100px;
+    height: 20px;
+    background-color: #4f84a4;
+}
+
+.color_29 {
+    width: 100px;
+    height: 20px;
+    background-color: #8fc1e2;
+}
+
+.color_30 {
+    width: 100px;
+    height: 20px;
+    background-color: #f8f9fb;
+}
+
+.lively_yet_soothing {
+    width: 400px;
+    margin: 10px;
+    display: inline-flex;
+}
+
+.color_31 {
+    width: 100px;
+    height: 20px;
+    background-color: #016670;
+}
+
+.color_32 {
+    width: 100px;
+    height: 20px;
+    background-color: #9fedd7;
+}
+
+.color_33 {
+    width: 100px;
+    height: 20px;
+    background-color: #fff9c7;
+}
+
+.color_34 {
+    width: 100px;
+    height: 20px;
+    background-color: #fbe180;
+}
+
+.color_35 {
+    width: 100px;
+    height: 20px;
+    background-color: #edeae5;
+}

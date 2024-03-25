@@ -1,0 +1,272 @@
+* {
+    font-size: 1.1vw;
+}
+
+@media only screen and (max-width: 768px) {
+    * {
+        font-size: 1.8vw;
+    }
+
+    nav {
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 5%;
+        background-color: #7d7d7d;
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    nav.active {
+        max-height: 300px;
+        max-width: 60%;
+    }
+    
+    nav.show {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .cv_tiles.deactivated {
+        pointer-events: none; /* Disable click events on deactivated tiles */
+        opacity: 0.5; /* Apply a visual indication for deactivated tiles (you can adjust the opacity as needed) */
+    }
+    
+    .tiles_details.deactivated {
+        display: none; 
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    height: 100vh;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 10px;
+    background-size: contain;
+}
+
+header h2 {
+    padding-left: 10%;
+}
+
+nav {
+    width: 70%;
+    position: fixed;
+    margin-left: 30%;
+    z-index: 100;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-inline-start: 0;
+    margin-block: 0;
+    background-color: #7d7d7d;
+} 
+
+nav > ul > li {
+    color: white;
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+}
+  
+nav > ul > li:hover {
+    color: rgba(0,40,111,0.6);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+li > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cv_tiles {
+    width: 28%;
+    height: 18%;
+    cursor: pointer;
+    border-radius: 10px;
+    position: fixed;
+    top: 6%;
+    left: 10px; /* Set left to 0 to align them to the left side */
+    display: flex;
+    flex-direction: column; /* Stack tiles vertically */
+}
+
+.cv_tiles:not(:first-child) {
+    margin: 1% 0px; /* Adjust the margin between tiles */
+}
+
+#tile_1, #tile_2, #tile_3, #tile_4 {
+    margin-top: 1px;
+    color: white;
+}
+
+#tile_1 {
+    background-color: #4f84a4;
+}
+
+#tile_2 {
+    background-color: #4f8fb6;
+}
+#tile_3 {
+    background-color: #5d9ec6;
+}
+
+#tile_4 {
+    background-color: #71b5e2;
+}
+
+.tiles_headlines {
+    margin: auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 12%;
+    font-size: 1rem;
+}
+
+.tiles_details {
+    display: none;
+    width: 68%;
+    height: 80%;
+    position: absolute;
+
+    left: 30%;
+    overflow: auto;
+}
+
+.tiles_details::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+}
+
+.tiles_details::-webkit-scrollbar-thumb {
+    background-color: #333; /* Set the color of the scrollbar thumb */
+    border-radius: 5px; /* Set the border radius of the thumb */
+    height: 8px; /* Set the height of the horizontal line */
+}
+
+.tiles_details::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Set the color of the scrollbar track */
+}
+
+.institutes {
+    display: flex;
+    width: 95%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+}
+
+.blue {
+    background-color: rgba(0, 123, 255, 0.05);
+    border-radius: 10px;
+}
+
+.light_blue {
+    background-color: rgba(0, 0, 0, 0.036);
+    border-radius: 10px;
+}
+
+.logo img {
+    width: 70px;
+    padding: 10px;
+}
+
+#logo_qual {
+    width: 50%;
+    margin: 10% 5%;
+}
+
+.institutes_details {
+    display: flex;
+}
+
+.line {
+    position: relative;
+    border-left: 2px solid rgba(128, 128, 128, 0.449);
+    margin-top: 25px;
+    color: rgba(128, 128, 128, 0.549);
+}
+
+
+.line::before {
+    content: "\2022"; /* Unicode character for a bullet */
+    position: absolute; /* Changed to absolute positioning */
+    left: -8px;
+    top: -10px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+}
+
+.details, .details_qual {
+    padding-left: 10px; 
+}
+
+.details h3, .details_qual h3 {
+    margin: 8px 0px;
+}
+.details p, .details_qual p {
+    padding: 0;
+    margin: 5px 0px;
+}
+
+.details span, .details_qual span {
+    color: gray;
+}
+
+.details_qual {
+    display: flex;
+}
+
+
+footer {
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+}
+
+footer h6 {
+    color: white;
+    margin-left: 10px; 
+    font-size: 0.5rem;
+}
+
+footer ul {
+    color: white;
+}
+
+footer > ul > li {
+    font-size: 10px;
+    list-style-type: none;
+    padding-right: 10px;
+}
