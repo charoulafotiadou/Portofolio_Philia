@@ -111,8 +111,8 @@ li > a {
     height: 18%;
     cursor: pointer;
     border-radius: 10px;
-    position: fixed;
-    top: 6%;
+    position: relative;
+    #top: 6%;
     left: 10px; /* Set left to 0 to align them to the left side */
     display: flex;
     flex-direction: column; /* Stack tiles vertically */
@@ -156,7 +156,7 @@ li > a {
     width: 68%;
     height: 80%;
     position: absolute;
-
+    flex-direction: column;
     left: 30%;
     overflow: auto;
 }
