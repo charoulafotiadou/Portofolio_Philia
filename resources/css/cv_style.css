@@ -4,7 +4,7 @@
 
 @media only screen and (max-width: 768px) {
     * {
-        font-size: 1.8vw;
+        font-size: 3vw;
     }
 
     nav {
@@ -22,10 +22,6 @@
         max-height: 300px;
         max-width: 60%;
     }
-    
-    nav.show {
-        display: flex;
-    }
 
     nav ul {
         flex-direction: column;
@@ -42,13 +38,40 @@
         font-size: 20px;
     }
 
-    .cv_tiles.deactivated {
-        pointer-events: none; /* Disable click events on deactivated tiles */
-        opacity: 0.5; /* Apply a visual indication for deactivated tiles (you can adjust the opacity as needed) */
+    .cv_tiles {
+        width: 90% !important;
+        margin: 10px auto !important;
+        display: flex;
     }
-    
-    .tiles_details.deactivated {
-        display: none; 
+
+    .cv_tiles.deactivated {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    .tiles_headlines {
+        margin: auto !important;
+    }
+
+    .tiles_details {
+        width: 90%;
+        left: 5%;
+        top: 0;
+        display: none;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px;
+    }
+
+    footer h6 {
+        font-size: 2rem;
+    }
+
+    footer ul li {
+        font-size: 0.8rem;
+        padding: 5px 0;
     }
 }
 
@@ -78,7 +101,7 @@ nav {
     z-index: 100;
 }
 
-nav > ul {
+nav ul {
     display: flex;
     justify-content: space-evenly;
     padding-top: 2%;
@@ -86,22 +109,22 @@ nav > ul {
     padding-inline-start: 0;
     margin-block: 0;
     background-color: #7d7d7d;
-} 
+}
 
-nav > ul > li {
+nav ul li {
     color: white;
     display: block;
     font-size: 1rem;
     font-weight: 800;
 }
-  
-nav > ul > li:hover {
+
+nav ul li:hover {
     color: rgba(0,40,111,0.6);
     font-weight: 800;
     cursor: pointer;
 }
 
-li > a {
+li a {
     color: inherit;
     text-decoration: none;
 }
@@ -111,15 +134,8 @@ li > a {
     height: 18%;
     cursor: pointer;
     border-radius: 10px;
-    position: relative;
-    #top: 6%;
-    left: 10px; /* Set left to 0 to align them to the left side */
     display: flex;
-    flex-direction: column; /* Stack tiles vertically */
-}
-
-.cv_tiles:not(:first-child) {
-    margin: 1% 0px; /* Adjust the margin between tiles */
+    vertical-align: middle;
 }
 
 #tile_1, #tile_2, #tile_3, #tile_4 {
@@ -134,6 +150,7 @@ li > a {
 #tile_2 {
     background-color: #4f8fb6;
 }
+
 #tile_3 {
     background-color: #5d9ec6;
 }
@@ -145,34 +162,33 @@ li > a {
 .tiles_headlines {
     margin: auto;
     display: flex;
-    position: relative;
     justify-content: center;
-    padding: 12%;
     font-size: 1rem;
+    margin: auto;
 }
 
 .tiles_details {
     display: none;
     width: 68%;
     height: 80%;
-    position: absolute;
-    flex-direction: column;
+    position: relative;
     left: 30%;
+    top: -80%;
     overflow: auto;
 }
 
 .tiles_details::-webkit-scrollbar {
-    width: 10px; /* Set the width of the scrollbar */
+    width: 10px;
 }
 
 .tiles_details::-webkit-scrollbar-thumb {
-    background-color: #333; /* Set the color of the scrollbar thumb */
-    border-radius: 5px; /* Set the border radius of the thumb */
-    height: 8px; /* Set the height of the horizontal line */
+    background-color: #333;
+    border-radius: 5px;
+    height: 8px;
 }
 
 .tiles_details::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Set the color of the scrollbar track */
+    background-color: #f1f1f1;
 }
 
 .institutes {
@@ -214,10 +230,9 @@ li > a {
     color: rgba(128, 128, 128, 0.549);
 }
 
-
 .line::before {
-    content: "\2022"; /* Unicode character for a bullet */
-    position: absolute; /* Changed to absolute positioning */
+    content: "\2022";
+    position: absolute;
     left: -8px;
     top: -10px;
     transform: translateY(-50%);
@@ -225,15 +240,16 @@ li > a {
 }
 
 .details, .details_qual {
-    padding-left: 10px; 
+    padding-left: 10px;
 }
 
 .details h3, .details_qual h3 {
-    margin: 8px 0px;
+    margin: 8px 0;
 }
+
 .details p, .details_qual p {
     padding: 0;
-    margin: 5px 0px;
+    margin: 5px 0;
 }
 
 .details span, .details_qual span {
@@ -243,7 +259,6 @@ li > a {
 .details_qual {
     display: flex;
 }
-
 
 footer {
     background-color: #333;
@@ -257,7 +272,7 @@ footer {
 
 footer h6 {
     color: white;
-    margin-left: 10px; 
+    margin-left: 10px;
     font-size: 0.5rem;
 }
 
@@ -265,7 +280,7 @@ footer ul {
     color: white;
 }
 
-footer > ul > li {
+footer ul li {
     font-size: 10px;
     list-style-type: none;
     padding-right: 10px;
