@@ -12,10 +12,11 @@
 </head>
 <body>
     <header>
-        <h2></h2>
+        <h2>Φίλια Ισαρή</h2>
+        <div id="menu-icon">&#9776;</div>
         <nav>
             <ul>
-                <li><a href="#">Αρχική</a></li>
+                <li><a href="./index_v.4.html">Αρχική</a></li>
                 <li><a href="./cv.html">Βιογραφικό</a></li>
                 <li><a href="research">Έρευνα</a></li>
                 <li><a href="publications">Δημοσιεύσεις</a></li>
@@ -28,7 +29,7 @@
         <div class="container">
             <div class="image-container">
                 <img src="./resources/images/philia_issari.jpg" alt="Philia Issari Image">
-                <p>ΦΙΛΙΑ ΙΣΑΡΗ</p>
+                <figcaption>ΦΙΛΙΑ ΙΣΑΡΗ</figcaption>
             </div>
             <div class="text-container">
                 <div class="text-box-border">
@@ -101,5 +102,14 @@
         </ul>
     </footer>
     <script src="./app_2.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const menuIcon = document.getElementById('menu-icon');
+        const nav = document.querySelector('nav');
+    
+        menuIcon.addEventListener('click', function () {
+            nav.classList.toggle('active');
+        });
+    });</script>
     </body>
 </html>

@@ -1,25 +1,46 @@
 var publicationsIndex = 0;
-showPublication();
 
+// Function to update the number of visible images based on screen width
+function updateVisibleImages() {
+    const publications = document.querySelectorAll('.publication');
+    const isMobile = window.innerWidth <= 768;
+    const visibleCount = isMobile ? 2 : 3; // Show 2 images on mobile, 3 on larger screens
+
+    // Hide all publications
+    publications.forEach(pub => pub.style.display = 'none');
+
+    // Show the required number of publications
+    for (let i = 0; i < visibleCount; i++) {
+        if (publications[(publicationsIndex + i) % publications.length]) {
+            publications[(publicationsIndex + i) % publications.length].style.display = 'block';
+        }
+    }
+}
+
+// Function to show the publications
 function showPublication() {
-    var i;
     var publications = document.getElementsByClassName("publication");
 
-    for (i = 0; i < publications.length; i++) {
+    for (var i = 0; i < publications.length; i++) {
         publications[i].style.display = "none";
     }
 
     publicationsIndex++;
-    if (publicationsIndex > publications.length - 2) {
-        publicationsIndex = 1;
+    if (publicationsIndex > publications.length - 1) {
+        publicationsIndex = 0;
     }
 
-    for (i = publicationsIndex - 1; i < publicationsIndex + 2; i++) {
-        publications[i].style.display = "block";
-    }
+    updateVisibleImages(); // Ensure the number of visible images is correct
 
     setTimeout(showPublication, 5000); // Change image every 5 seconds
 }
+
+// Call the function on load and on resize
+window.addEventListener('load', function() {
+    updateVisibleImages();
+    showPublication();
+});
+window.addEventListener('resize', updateVisibleImages);
 
 // Initialize TypeIt
 var typeitInstance = new TypeIt("#typeit-container", {
@@ -49,6 +70,3 @@ typeitInstance
     .type(" στο Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών")
     .go()
     .pause(1000);
-
-
-    
