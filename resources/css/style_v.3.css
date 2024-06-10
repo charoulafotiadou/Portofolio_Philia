@@ -276,7 +276,8 @@ footer > ul > li {
     padding-right: 10px;
 }
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 767px) {
     * {
         font-size: 3vw;
     }
@@ -353,20 +354,21 @@ footer > ul > li {
 
     .container .text-container,
     .new_section > div {
-        width: 80%;
+        width: 70%;
         margin: 0;
     }
 
     .new_section {
-        height: 40%;
+        height: 50%;
         display: flex;
         align-items: center;
+        padding: 5vw;
     }
 
     .box_header button {
         position: relative;
-        left: 45vw;
-        bottom: -12vw;
+        left: 35vw;
+        bottom: -10vw;
         background-color: black;
         border: none;
         padding: 3% 6%;
@@ -379,16 +381,25 @@ footer > ul > li {
         height: 200px;
     }
 
+    .slideshow-publications {
+        width: 100%;
+        display: flex;
+    }
+
+    .publication-container {
+        width: 80%;
+        position: relative;
+        left: 10vw;
+    }
+
     .publication-container > div > h3 {
         position: relative;
-        left: -25vw;
     }
 
     .publication img {
-        width: 80px;
+        width: 18vw;
         margin: auto;
         position: relative;
-        left: -20vw;
     }
 
     .publication-container .publication:nth-child(-n+2) {
@@ -400,8 +411,7 @@ footer > ul > li {
     }
 
     .publication {
-        width: calc(50% - 10px); /* Adjust width for smaller screens */
-        margin: 10px auto; /* Center align the images */
+        width: calc(50% - 50px); /* Adjust width for smaller screens */
     }
 
     footer {
@@ -412,11 +422,12 @@ footer > ul > li {
     }
 
     footer h6 {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         text-align: right;
     }
 
     footer ul li {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+        padding: 0px 0;
     }
 }
