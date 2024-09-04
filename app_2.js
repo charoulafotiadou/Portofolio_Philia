@@ -50,18 +50,10 @@ var typeitInstance = new TypeIt("#typeit-container", {
 
 // Typing the initial text
 typeitInstance
-    .type("Διευθύντρια Ποιοτικής Έρευνας στην Ψυχολογία και την ψυχι")
-    .pause(500)
-    .move(-3)
-    .delete(1)
-    .type("Ψ")
-    .move(3)
-    .type("κή Υγεία")
+    .type("Διευθύντρια Ποιοτικής Έρευνας στην Ψυχολογία και την Ψυχική Υγεία")
     .pause(1000)
     .delete(66)
-    .type("Καθηγη", { delay: 300 })
-    .delete(1)
-    .type("ή")
+    .type("Καθηγή", { delay: 300 })
     .type("τρια Συμβουλευτικής Ψυχολογι")
     .pause(400)
     .delete(1)

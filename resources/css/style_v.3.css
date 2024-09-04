@@ -7,7 +7,7 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 body {
@@ -24,81 +24,18 @@ body::before {
     position: absolute;
     background-image: url("../images/bg_abstract_blue.jpg");
     opacity: 0.2;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
 }
 
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 10px;
-    background-size: contain;
-    padding: 0 1rem; /* Add padding to ensure content is not too close to the edges */
-}
-
-header > h2 {
-    position: relative;
-    top: -1vw;
-}
-
-#menu-icon {
-    display: none;
-    cursor: pointer;
-    font-size: 30px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-nav {
-    width: 90%;
-    position: relative;
-    padding-bottom: 2%;
-}
-
-nav > ul {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1% 0;
-    margin: 0;
-    background-color: #333333cf;
-    list-style: none; /* Remove default list styling */
-    border: none; /* Ensure no borders are added */
-}
-
-nav > ul > li {
-    color: #f8f9fb;
-    display: block;
-    font-weight: 800;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-}
-  
-nav > ul > li:hover {
-    color: #8fc1e2;
-    font-weight: 800;
-    cursor: pointer;
-    font-size: 1.1rem;
-}
-
-li > a {
-    color: inherit;
-    text-decoration: none;
-    display: block; /* Ensure full clickable area */
-}
-
 .container {
-    width: 90%;
+    width: 70%;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 4%;
+    padding: 2%;
 }
 
 .image-container {
@@ -121,29 +58,22 @@ li > a {
 }
 
 .text-container {
-    width: 70%;
-    height: auto;
+    width: 60%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.4%;
-    border: 10px outset #8fc1e2;
     box-sizing: border-box;
 }
 
-.text-box-border {
-    border: 7px outset;
-}
-
-.text-box {
-    background-color: #8fc1e28f;
-    margin: 1%;
-    padding: 1%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: black;
-}
-
-.text-box h2 {
-    font-size: 0.9rem;
+#typeit-container {
+    width: 100%; 
+    text-align: center; 
+    font-size: 1rem; 
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; 
 }
 
 .new_section {
@@ -202,12 +132,17 @@ li > a {
     padding: 1.5vh 4vw;
 }
 
-.publication-container {
-    width: 60%;
+.slideshow-publications {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.publication-container {
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
     position: relative;
-    left: 25%;
     margin-bottom: 4%;
     background-color: #8fc1e28f;
     border: 10px solid;
@@ -227,8 +162,8 @@ li > a {
 }
 
 .publication {
-    width: 30%;
-    padding: 3vw;
+    width: 15%;
+    padding: 1vw;
     text-align: center;
     display: none;
 }
@@ -249,7 +184,6 @@ li > a {
 }
 
 footer {
-    background-color: #333;
     width: 100%;
     height: auto;
     display: flex;
@@ -282,82 +216,43 @@ footer > ul > li {
         font-size: 3vw;
     }
 
-    header > h2 {
-        display: none;
-    }
-
-    body::before {
-        content: "";
-        position: absolute;
-        background-image: url("../images/bg_abstract_blue.jpg");
-        opacity: 0.2;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-
-    #menu-icon {
-        display: block;
-        cursor: pointer;
-        font-size: 30px;
-        position: fixed; /* Changed from absolute to fixed */
-        right: 20px;
-        top: 20px;
-        z-index: 1000; /* Ensure it is on top */
-    }
-
-    nav {
-        max-height: 0;
-        overflow: hidden;
-        flex-direction: column;
-        position: relative;
-        top: 65px;
-        left: 5%;
-        width: 90%;
-        background-color: #7d7d7d;
-        transition: max-height 0.5s ease-in-out;
-        z-index: 999; 
-        border: none; 
-    }
-
-    nav.active {
-        max-height: 300px;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .container,
     .new_section,
     .slideshow-publications,
     footer {
         flex-direction: column;
         width: 100%;
-        margin: 0;
+        margin: 10px;
         position: relative;
-        top: 100px;
-    }
-
-    .container > .image-container {
-        display: none;
     }
 
     .container .text-container,
     .new_section > div {
-        width: 70%;
+        width: 80%;
         margin: 0;
     }
 
+    .container {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-container {
+        width: 50.33%;
+        padding: 2%;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-container {
+        height: 100px;
+    }
+    
     .new_section {
         height: 50%;
         display: flex;
@@ -387,9 +282,8 @@ footer > ul > li {
     }
 
     .publication-container {
-        width: 80%;
+        width: 100%;
         position: relative;
-        left: 10vw;
     }
 
     .publication-container > div > h3 {
